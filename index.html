@@ -191,27 +191,29 @@
     }
 
     .walking-avatar {
-      position: absolute;
-      z-index: 1;
-      bottom: 22px;
-      left: 8px;
-      width: 62px;
-      height: 90px;
-      display: grid;
-      place-items: center;
-      font-size: 45px;
-      animation: walkAcross 8s ease-in-out infinite alternate;
-    }
+  display: none;
+}
 
-    .walking-avatar img {
-      width: 62px;
-      height: 90px;
-      object-fit: cover;
-      object-position: center top;
-      border: 2px solid var(--blue);
-      border-radius: 12px;
-      animation: walkBob .4s ease-in-out infinite alternate;
-    }
+.walking-avatar.photo-ready {
+  display: grid;
+  position: absolute;
+  z-index: 1;
+  bottom: 24px;
+  left: 8px;
+  width: 64px;
+  height: 92px;
+  animation: walkAcross 8s ease-in-out infinite alternate;
+}
+
+.walking-avatar img {
+  width: 64px;
+  height: 92px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 13px;
+  border: 2px solid var(--accent);
+  animation: walkBob .42s ease-in-out infinite alternate;
+}
 
     @keyframes walkAcross {
       from { transform: translateX(0); }
